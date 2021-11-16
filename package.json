@@ -1,6 +1,6 @@
 {
   "name": "d3-bubble-radar",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Add CSS",
   "main": "./lib/cjs/index.js",
   "module": "./lib/esm/index.js",
@@ -14,10 +14,6 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/s4birli/react-d3-radar.git"
-  },
-  "peerDependencies": {
-    "react": "^16.8.0",
-    "react-dom": "^16.8.0"
   },
   "keywords": [
     "radar",

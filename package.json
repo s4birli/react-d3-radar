@@ -1,7 +1,7 @@
 {
   "name": "d3-bubble-radar",
-  "version": "0.0.2",
-  "description": "",
+  "version": "0.0.3",
+  "description": "Add CSS",
   "main": "./lib/cjs/index.js",
   "module": "./lib/esm/index.js",
   "types": "./lib/esm/index.d.ts",

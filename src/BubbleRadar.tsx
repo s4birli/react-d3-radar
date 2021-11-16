@@ -3,6 +3,7 @@ import * as d3 from "d3";
 import * as _ from "lodash";
 import { MainType, DimensionsType } from "./index.interface";
 import { Table22 } from "./Lookup";
+import './App.css';
 
 export interface Props {
   data: MainType[];

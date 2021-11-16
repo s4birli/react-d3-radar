@@ -1,5 +1,4 @@
 import BubbleRadar, { MainType, RiskType } from "d3-bubble-radar";
-import "./App.css";
 import { fakeData } from "./Data";
 
 function App() {

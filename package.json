@@ -1,26 +1,44 @@
 {
-  "name": "react-d3-radar",
-  "version": "0.0.1",
+  "name": "d3-bubble-radar",
+  "version": "0.0.2",
+  "description": "",
+  "main": "./lib/cjs/index.js",
+  "module": "./lib/esm/index.js",
+  "types": "./lib/esm/index.d.ts",
   "scripts": {
     "build": "yarn build:esm && yarn build:cjs",
     "build:esm": "tsc",
     "build:cjs": "tsc --module commonjs --outDir lib/cjs"
   },
-  "license": "MIT",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/s4birli/react-d3-radar.git"
+  },
+  "peerDependencies": {
+    "react": "^16.8.0",
+    "react-dom": "^16.8.0"
+  },
+  "keywords": [
+    "radar",
+    "d3",
+    "react"
+  ],
+  "author": "s4birli",
+  "bugs": {
+    "url": "https://github.com/s4birli/react-d3-radar/issues"
+  },
+  "homepage": "https://github.com/s4birli/react-d3-radar#readme",
   "devDependencies": {
+    "@types/d3": "^7.1.0",
+    "@types/lodash": "^4.14.177",
     "@types/react": "^17.0.35",
     "@types/react-dom": "^17.0.11",
+    "d3": "^7.1.1",
+    "lodash": "^4.17.21",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "typescript": "^4.4.4",
-    "prepublishOnly": "yarn build"
-  },
-  "main": "./lib/cjs/index.js",
-  "module": "./lib/esm/index.js",
-  "types": "./lib/esm/index.d.ts",
-  "peerDependencies": {
-    "react": "^16.0.0",
-    "react-dom": "^16.0.0"
+    "typescript": "^4.4.4"
   },
   "files": [
     "/lib"

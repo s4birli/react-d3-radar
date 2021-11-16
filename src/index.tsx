@@ -1,7 +1,8 @@
-import React from "react";
+import { MainType } from "./index.interface";
+import { RiskType } from "./Lookup";
 
-const SayHello = ({ name }: { name: string }): JSX.Element => (
-  <div>Hey {name}, say hello to TypeScript.</div>
-);
+import BubbleRadar from "./BubbleRadar";
 
-export default SayHello;
+export { MainType, RiskType };
+
+export default BubbleRadar;

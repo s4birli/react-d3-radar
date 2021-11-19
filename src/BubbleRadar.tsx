@@ -3,7 +3,7 @@ import * as d3 from "d3";
 import * as _ from "lodash";
 import { MainType, DimensionsType } from "./index.interface";
 import { Table22 } from "./Lookup";
-import './App.css';
+import "./App.css";
 
 export interface Props {
   data: MainType[];
@@ -74,6 +74,15 @@ export default class BubbleRadar extends React.Component<Props, State> {
     svgEl.selectAll("*").remove();
     this.drawRing(svgEl);
     this.drawBubble(svgEl);
+  }
+
+  shouldComponentUpdate() {
+    const svgEl = d3.select(this.svgRef.current);
+
+    svgEl.selectAll("*").remove();
+    this.drawRing(svgEl);
+    this.drawBubble(svgEl);
+    return true;
   }
 
   drawBubble(

@@ -1,4 +1,5 @@
 import BubbleRadar, { MainType, RiskType } from "d3-bubble-radar";
+import React, { useEffect } from "react";
 import { fakeData } from "./Data";
 
 function App() {
@@ -10,9 +11,19 @@ function App() {
       return item;
     });
 
+  const [realdata, setData] = React.useState<MainType[]>([data[0]]);
+  useEffect(() => {
+    let i = 10;
+    const interval = setInterval(() => {
+      setData(data.slice(0, i));
+      i+=10;
+    }, 1000);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <div className="App">
-      <BubbleRadar data={data} />
+      <BubbleRadar data={realdata} />
     </div>
   );
 }

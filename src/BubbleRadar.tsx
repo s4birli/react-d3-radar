@@ -88,6 +88,10 @@ export default class BubbleRadar extends React.Component<Props, State> {
   drawBubble(
     svgEl: d3.Selection<SVGSVGElement | null, unknown, null, undefined>
   ) {
+    var div = d3.select("body").append("div")	
+    .attr("class", "tooltip")				
+    .style("opacity", 0);
+
     const circles = svgEl
       .selectAll("circle")
       .data(
@@ -121,7 +125,19 @@ export default class BubbleRadar extends React.Component<Props, State> {
       .attr("fill", (item) => this.color(item.impact))
       .attr("stroke", (item) =>
         d3.rgb(this.color(item.impact)).brighter(0.5).toString()
-      );
+      ).on("mouseover", function(d) {		
+        div.transition()		
+            .duration(200)		
+            .style("opacity", .9);		
+        div	.html("TEST")	
+            .style("left", "10px")		
+            .style("top", "10px");	
+        })					
+    .on("mouseout", function(d) {		
+        div.transition()		
+            .duration(500)		
+            .style("opacity", 0);	
+    });;
 
     circles
       .transition()
